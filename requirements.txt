@@ -1,5 +1,3 @@
-pip install pygame
-pip install torch
-pip install pickle
-pip install numpy
-pip install collections
+pygame
+torch
+numpy
