@@ -11,19 +11,26 @@
 
 ## ⚡ Quick Start
 
-### 1️⃣ Install Dependencies
+### 1️⃣ Clone the Repository
+
+```bash
+git clone https://github.com/Kairiki-Duck/Snake_Game_with_Reinforcement_Learning_Agent.git
+cd Snake_Game_with_Reinforcement_Learning_Agent
+```
+
+### 2️⃣ Install Dependencies
 
 ```bash
 pip install -r requirements.txt
 ```
 
-### 2️⃣ Play the Game
+### 3️⃣ Play the Game
 
 ```bash
 python eating_snake.py
 ```
 
-### 3️⃣ Watch Trained AI Play
+### 4️⃣ Watch Trained AI Play
 
 ```bash
 python agent_test.py
@@ -173,3 +180,4 @@ You can:
 
 
 ```
+
