@@ -8,6 +8,28 @@
 
 > **从 0 到 22000 分的进化！** 本项目展示了一个基于 DQN 的智能体如何通过迁移学习，从掌握基础生存到玩转复杂的 Combo & Frenzy 机制。你可以自己上手游玩，也可以训练或观看Agent游玩
 
+
+## ⚡ Quick Start
+
+### 1️⃣ Install Dependencies
+
+```bash
+pip install -r requirements.txt
+```
+
+### 2️⃣ Play the Game
+
+```bash
+python eating_snake.py
+```
+
+### 3️⃣ Watch Trained AI Play
+
+```bash
+python agent_test.py
+```
+
+
 ---
 
 ## 🚀 核心亮点 (Key Highlights)
@@ -148,5 +170,6 @@ You can:
 ├── snake_memory.pkl              # Replay memory
 ├── classic_snake_agent.pth       # Classic model
 └── classic_snake_memory.pkl      # Classic replay memory
+
 
 ```
