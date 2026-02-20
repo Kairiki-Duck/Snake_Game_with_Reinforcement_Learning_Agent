@@ -9,6 +9,7 @@
 > **从 0 到 22000 分的进化！** 本项目展示了一个基于 DQN 的智能体如何通过迁移学习，从掌握基础生存到玩转复杂的 Combo & Frenzy 机制。你可以自己上手游玩，也可以训练或观看Agent游玩
 
 
+
 ## ⚡ Quick Start
 
 ### 1️⃣ Clone the Repository
@@ -36,6 +37,54 @@ python eating_snake.py
 python agent_test.py
 ```
 
+## 操作方法
+- **方向键** 控制蛇的移动方向（上下左右）。
+- 蛇会自动前进，移动到屏幕边缘会穿越到另一边。
+
+---
+
+## 食物类型
+
+1. **普通食物（Red）**
+   - 基础积分：1分
+   - 每吃一个普通食物会增加 Combo 计数。
+   - 每吃到 5 个会生成 **超级食物**，每吃到 20 个会生成 **缩小食物**。
+   - Frenzy 模式下，每吃普通食物积分大幅提升。
+
+2. **超级食物（Gold）**
+   - 吃到立即触发 **Frenzy 模式**。
+   - 基础积分：20分 × 当前 Combo
+   - Frenzy 模式下蛇的速度加快，积分倍率提升。
+
+3. **缩小食物（Pink）**
+   - 吃到立即触发 **Frenzy 模式**。
+   - 会缩短蛇身（最多保留 3 个身体段）。
+   - 基础积分：20分 × 当前 Combo
+   - 同样可以触发连击效果。
+
+---
+
+## Combo 机制
+- 每连续吃到食物，Combo 计数会增加。
+- Combo 时间窗口：2秒，如果超过时间未吃到新食物，Combo 重置。
+- 积分计算：`积分 = 食物基础积分 × Combo 计数`
+
+---
+
+## Frenzy 模式
+- Frenzy 模式下：
+  - 蛇的速度提升 1.5 倍。
+  - 积分倍率大幅提升。
+  - 游戏画面出现特效，并显示 "FRENZY MODE" 提示。
+- 模式持续时间有限，时间结束后恢复正常。
+
+---
+
+## 积分规则
+- **普通食物**：1 × Combo  
+- **超级食物 / 缩小食物**：20 × Combo  
+- Combo 越高，吃同样的食物积分越多。
+- 合理利用 Combo 和 Frenzy 模式可以快速提高分数。
 
 ---
 
@@ -100,6 +149,58 @@ python agent_test.py
 > **From 0 to 22,000+ score evolution!**  
 > This project demonstrates how a DQN-based agent learns progressively through transfer learning — from basic survival skills to mastering complex Combo & Frenzy mechanics.  
 > You can play the game yourself, train the agent, or watch the trained AI in action.
+
+
+---
+
+## Controls
+- Use **arrow keys** to control the snake's direction (up, down, left, right).  
+- The snake moves automatically. Going off one edge of the screen will make it appear on the opposite side.
+
+---
+
+## Food Types
+
+1. **Normal Food (Red)**
+   - Base score: 1 point  
+   - Eating a normal food increases the Combo count.  
+   - Every 5 foods eaten spawns a **Super Food**, every 20 foods eaten spawns a **Shrink Food**.  
+   - In Frenzy mode, eating normal food gives a much higher score.
+
+2. **Super Food (Gold)**
+   - Eating it immediately triggers **Frenzy Mode**.  
+   - Base score: 20 × current Combo  
+   - In Frenzy mode, the snake moves faster and score multiplier increases.
+
+3. **Shrink Food (Pink)**
+   - Eating it immediately triggers **Frenzy Mode**.  
+   - Shrinks the snake's length.  
+   - Base score: 20 × current Combo  
+   - Can also trigger combo bonuses.
+
+---
+
+## Combo Mechanic
+- Each consecutive food eaten increases the Combo count.  
+- Combo window: 2 seconds. If no new food is eaten within this time, Combo resets.  
+- Score calculation: `Score = Base food score × Combo count`
+
+---
+
+## Frenzy Mode
+- During Frenzy Mode:  
+  - Snake speed increases by 1.5×  
+  - Score multiplier increases significantly  
+  - Special visual effects appear, with a "FRENZY MODE" indicator  
+- Frenzy Mode lasts for a limited time and ends automatically.
+
+---
+
+## Scoring Rules
+- **Normal Food**: 1 × Combo  
+- **Super Food / Shrink Food**: 20 × Combo  
+- The higher the Combo, the more points each food gives.  
+- Using Combo and Frenzy Mode effectively can boost your score quickly.
 
 ---
 
@@ -180,4 +281,5 @@ You can:
 
 
 ```
+
 
